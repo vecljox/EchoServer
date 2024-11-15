@@ -258,7 +258,7 @@ int main() {
 		pContext->socket = clientSocket;
 
 		PER_IO_DATA* pIoData = new PER_IO_DATA();
-		ZeroMemory(pIoData, sizeof(PER_IO_DATA));
+		// ZeroMemory(pIoData, sizeof(PER_IO_DATA));
 
 		// 将新套接字与IOCP关联
 		if (CreateIoCompletionPort((HANDLE)clientSocket, g_hIOCP, (ULONG_PTR)pContext, 0) == NULL) {
